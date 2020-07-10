@@ -8,7 +8,8 @@
   <% @blog.each do |blog| %>
     <tr>
       <td><%= blog.content %></td>
-      <td><%= blog.content %></td>
+      &emsp;
+      <td><%= blog.created_at %></td>
       <td><%= link_to '編集', edit_blog_path(blog.id) %></td>
       <td><%= link_to '削除', blog_path(blog.id), method: :delete %></td>
     </tr>
