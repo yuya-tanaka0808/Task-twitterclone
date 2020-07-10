@@ -1,6 +1,9 @@
 class BlogsController < ApplicationController
+  before_action :find_blog, only:[:show, :edit, :update, :destroy]
   def index
     @blog = Blog.all
+  end
+  def show
   end
   def new
     @blog = Blog.new
@@ -11,6 +14,15 @@ class BlogsController < ApplicationController
     redirect_to new_blog_path, notice: "投稿しました！"
     else
       render :new
+    end
+  end
+  def edit
+  end
+  def update
+    if @blog.update(blog_params)
+      redirect_to blogs_path, notice: "編集しました！"
+    else
+      render :edit
     end
   end
   def confirm
