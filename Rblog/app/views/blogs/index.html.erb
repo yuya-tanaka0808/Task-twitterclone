@@ -1,0 +1,17 @@
+<h1>Rblog一覧</h1>
+<p><%= notice %></p>
+<table>
+  <tr>
+    <th>内容</th>
+    <th>投稿日時</th>
+  </tr>
+  <% @blog.each do |blog| %>
+    <tr>
+      <td><%= blog.content %></td>
+      <td><%= blog.content %></td>
+      <td><%= link_to '編集', edit_blog_path(tweet.id) %></td>
+      <td><%= link_to '削除', blog_path(blog.id), method: :delete %></td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to 'New Rblog', new_blog_path %>
