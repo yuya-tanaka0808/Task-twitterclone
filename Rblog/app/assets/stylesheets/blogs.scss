@@ -1,3 +1,22 @@
 // Place all the styles related to the blogs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.navbar {
+  background-color: #CC3300;
+}
+.navbar-default .navbar-brand{
+  color: white;
+}
+.navbar-default .navbar-nav>li>a{
+  color: white;
+}
+
+footer {
+  width:100%;
+  background-color: #CC3300;
+  color: white;
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+}
