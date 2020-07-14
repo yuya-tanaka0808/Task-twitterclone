@@ -39,7 +39,7 @@ class BlogsController < ApplicationController
   end
   private
   def blog_params
-  params.require(:blog).permit(:content)
+    params.require(:blog).permit(:content)
   end
   def find_blog
     @blog = Blog.find(params[:id])
