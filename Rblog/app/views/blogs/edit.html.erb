@@ -4,7 +4,7 @@
 <p><%= notice %></p>
 <%= form_with(model: @blog, local:true) do |form| %>
   <div class="blog_content">
-    <%= form.label :content %>
+    <%= form.label :"内容" %>
     <br>
     <%= form.text_field :content %>
   </div>

@@ -2,6 +2,6 @@
 <%= form_with(model: @blog, url: blogs_path, local: true) do |form| %>
   <%= form.hidden_field :content %>
   <p>本文<%= @blog.content %></p>
-  <%= form.submit "あたらしくつぶやく" %>
+  <%= form.submit "新しくつぶやく" %>
   <%= form.submit "back", name: 'back' %>
 <% end %>
