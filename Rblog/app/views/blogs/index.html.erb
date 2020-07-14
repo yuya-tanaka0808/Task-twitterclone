@@ -2,17 +2,18 @@
 <p><%= notice %></p>
 <table>
   <tr>
-    <th>内容</th>
-    <th>投稿日時</th>
+    <th class="content">内容</th>
+    <th class= "created_at">投稿日時</th>
   </tr>
   <% @blog.each do |blog| %>
     <tr>
-      <td><%= blog.content %></td>
-      &emsp;
-      <td><%= l blog.created_at, format: :default %></td>
+      <td class= "content"><%= blog.content %></td>
+      <td class= "created_at"><%= l blog.created_at, format: :default %></td>
       <td><%= link_to '編集', edit_blog_path(blog.id) %></td>
       <td><%= link_to '削除', blog_path(blog.id), method: :delete %></td>
     </tr>
   <% end %>
 </table>
-<%= link_to '新しくつぶやく', new_blog_path %>
+<div class="link">
+  <a href="/blogs/new" class = "link">新しくつぶやく</a>
+</div>
